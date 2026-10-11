@@ -8,4 +8,4 @@ and challenges the user with an interactive quiz.
 
 ## Core Flow
 
-See → Discover → Guess → Learn → Observe Again
+See → Discover → Guess → Learn → Outdoor Quest
