@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-page: #3A3530;
+  --bg-surface: #454039;
+  --bg-elevated: #504A42;
+  --bg-input: #332F2A;
+  --bg-frame: #403A34;
+
+  --text-primary: #F1E8DC;
+  --text-secondary: #D8CEC1;
+  --text-muted: #B5AA9E;
+  --text-faint: #92877B;
+
+  --accent: #E9823E;
+  --accent-hover: #F39450;
+  --accent-dim: #C9672C;
+  --accent-tint: rgba(233, 130, 62, 0.14);
+  --accent-border: rgba(233, 130, 62, 0.38);
+
+  --border-faint: rgba(255, 255, 255, 0.07);
+  --border-subtle: rgba(255, 255, 255, 0.13);
+  --border-medium: rgba(255, 255, 255, 0.19);
+  --border-strong: rgba(255, 255, 255, 0.27);
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-xs: 5px;
+  --radius-sm: 9px;
+  --radius-md: 13px;
+  --radius-lg: 18px;
+
+  --shadow-card: 0 8px 25px rgba(0, 0, 0, 0.15);
+  --shadow-deep: 0 18px 45px rgba(0, 0, 0, 0.22);
+
+  --ease-out: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-snappy: 140ms ease-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--text-primary);
+  background: var(--bg-page);
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 100% 36px;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--accent);
+  color: #241F1A;
+}
