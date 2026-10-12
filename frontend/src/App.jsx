@@ -172,9 +172,10 @@ function App() {
 
       formData.append("image", image);
 
-      const response = await fetch(
-        "http://localhost:5000/api/analyze",
-        {
+      
+const response = await fetch(
+  "https://curiouslenz.onrender.com/api/analyze",
+  {
           method: "POST",
           body: formData,
         }
@@ -190,19 +191,19 @@ function App() {
 
       console.log("BACKEND RESPONSE:", data);
 
+      const aiResult = data.result || data;
+
       setResult({
-        object: data.object || "Unknown object",
-        fact: data.fact || "No fact available.",
-        quiz: Array.isArray(data.quiz) ? data.quiz : [],
-        answer: Number(data.answer) || 1,
-        explanation:
-          data.explanation ||
-          "No explanation available.",
-        lookAgain:
-          data.lookAgain ||
-          "Look carefully at the image again.",
-        filename: data.filename || image.name,
-      });
+  object: aiResult.object || "Unknown object",
+  fact: aiResult.fact || "No fact available.",
+  quiz: Array.isArray(aiResult.quiz) ? aiResult.quiz : [],
+  answer: Number(aiResult.answer) || 1,
+  explanation:
+    aiResult.explanation || "No explanation available.",
+  lookAgain:
+    aiResult.lookAgain || "Look carefully at the image again.",
+  filename: data.filename || image.name,
+});
 
       setTimeout(() => {
         document
