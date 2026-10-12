@@ -173,7 +173,7 @@ function App() {
       formData.append("image", image);
 
       const response = await fetch(
-        "https://curiouslenz.onrender.com/api/analyze",
+        "http://localhost:5000/api/analyze",
         {
           method: "POST",
           body: formData,
